@@ -128,13 +128,21 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 
 Du bist frisch gebackene Assistenzärztin bzw. Assistenzarzt in der Psychiatrie. Heute steht dein erster Nachtdienst an.
 
-Michael, der erfahrene Krankenpfleger, empfängt dich am Eingang.
+Es ist spät. Draußen regnet es in Strömen. Im Gebäude ist es ruhig – nur vereinzeltes Licht dringt aus den Fenstern der Notaufnahme. Du spürst eine Mischung aus Neugier und Nervosität.
 
-„Gut, dass du da bist. Erster Patient wartet schon – Jonas, 19 Jahre, Informatikstudent. Wurde von seinem Freund Tom gebracht. Sehr angespannt, paranoid. Tom möchte kurz mit dir sprechen, bevor wir reingehen.&quot;
+[[Weiter zur Notaufnahme|Intro-Michael]]
+
+---</tw-passagedata><tw-passagedata pid="3" name="Intro-Michael" tags="" position="350,100" size="100,100">&lt;img src=&quot;imgs/img_michael_nurse_profile.png&quot; class=&quot;sceneimg&quot;&gt;
+
+Am Eingang empfängt dich &lt;b&gt;Michael&lt;/b&gt; – ein erfahrener psychiatrischer Krankenpfleger, der seit über 15 Jahren in dieser Klinik arbeitet. Er kennt jeden Winkel der Station und ist bekannt dafür, auch in den schwierigsten Situationen ruhig zu bleiben.
+
+„Gut, dass du da bist. Ich bin Michael – ich begleite dich heute Nacht. Bei allem was du nicht sicher bist, kannst du mich fragen.
+
+Wir haben schon den ersten Patienten: Jonas, 19 Jahre, Informatikstudent – wurde von seinem Freund Tom gebracht. Sehr angespannt, paranoid. Tom wartet draußen und möchte kurz mit dir sprechen, bevor wir reingehen.&quot;
 
 [[Mit Tom sprechen|Scene-Tom]]
 
----</tw-passagedata><tw-passagedata pid="3" name="Scene-Tom" tags="" position="350,100" size="100,100">&lt;img src=&quot;imgs/img_tom_concerned.png&quot; class=&quot;sceneimg&quot;&gt;
+---</tw-passagedata><tw-passagedata pid="4" name="Scene-Tom" tags="" position="475,100" size="100,100">&lt;img src=&quot;imgs/img_tom_concerned.png&quot; class=&quot;sceneimg&quot;&gt;
 
 Tom wirkt erschöpft und besorgt.
 
@@ -150,7 +158,7 @@ Heute hat er gesagt: ‚Wenn sie mich kriegen, bin ich tot.&#39; Ich mache mir w
 
 [[Gemeinsam mit Michael das Zimmer betreten|Scene-Enter]]
 
----</tw-passagedata><tw-passagedata pid="4" name="Scene-Enter" tags="" position="475,100" size="100,100">&lt;img src=&quot;imgs/img_jonas_tense_standing.png&quot; class=&quot;sceneimg&quot;&gt;
+---</tw-passagedata><tw-passagedata pid="5" name="Scene-Enter" tags="" position="600,100" size="100,100">&lt;img src=&quot;imgs/img_jonas_tense_standing.png&quot; class=&quot;sceneimg&quot;&gt;
 
 Jonas steht angespannt im Raum. Sein Blick springt zwischen dir, der Neonröhre an der Decke und der Tür hin und her.
 
@@ -159,14 +167,14 @@ Wie steigst du in das Gespräch ein?
 * [[Empathisch beginnen|Enter-Empathic]]
 * [[Konfrontativ beginnen|Enter-Confront]]
 
----</tw-passagedata><tw-passagedata pid="5" name="Enter-Empathic" tags="" position="600,100" size="100,100">&lt;&lt;set $trust += 2&gt;&gt;
+---</tw-passagedata><tw-passagedata pid="6" name="Enter-Empathic" tags="" position="725,100" size="100,100">&lt;&lt;set $trust += 2&gt;&gt;
 „Es klingt so, als würden Sie sich im Moment stark bedroht und sehr angespannt fühlen. Mir ist wichtig zu verstehen, was gerade mit Ihnen los ist.&quot;
 
 &lt;i&gt;Michael (leise):&lt;/i&gt; „Gut – du nimmst seine Bedrohungsgefühle ernst, ohne den Inhalt zu bewerten. Das senkt die Spannung.&quot;
 
 [[Weiter zur Befragung|Assessment-Hub]]
 
----</tw-passagedata><tw-passagedata pid="6" name="Enter-Confront" tags="" position="725,100" size="100,100">&lt;&lt;set $trust -= 2&gt;&gt;
+---</tw-passagedata><tw-passagedata pid="7" name="Enter-Confront" tags="" position="850,100" size="100,100">&lt;&lt;set $trust -= 2&gt;&gt;
 &lt;&lt;set $agitation += 2&gt;&gt;
 Jonas erstarrt, springt dann auf: „Wie können Sie das sagen?! Sie gehören dazu!&quot;
 
@@ -174,7 +182,7 @@ Jonas erstarrt, springt dann auf: „Wie können Sie das sagen?! Sie gehören da
 
 [[Trotzdem weiter zur Befragung|Assessment-Hub]]
 
----</tw-passagedata><tw-passagedata pid="7" name="Assessment-Hub" tags="" position="850,100" size="100,100">&lt;img src=&quot;imgs/img_jonas_being_examined.png&quot; class=&quot;sceneimg&quot;&gt;
+---</tw-passagedata><tw-passagedata pid="8" name="Assessment-Hub" tags="" position="975,100" size="100,100">&lt;img src=&quot;imgs/img_jonas_being_examined.png&quot; class=&quot;sceneimg&quot;&gt;
 
 &lt;h3&gt;Psychopathologische Einschätzung&lt;/h3&gt;
 
@@ -193,7 +201,7 @@ Du hast alle Bereiche exploriert.
 * [[Weiter zur Differentialdiagnose|DiffDx]]
 &lt;&lt;/if&gt;&gt;
 
----</tw-passagedata><tw-passagedata pid="8" name="Assessment-Symptoms" tags="" position="975,100" size="100,100">&lt;&lt;set $doneSymptoms = true&gt;&gt;
+---</tw-passagedata><tw-passagedata pid="9" name="Assessment-Symptoms" tags="" position="1100,100" size="100,100">&lt;&lt;set $doneSymptoms = true&gt;&gt;
 &lt;img src=&quot;imgs/img_jonas_hearing_voices.png&quot; class=&quot;sceneimg&quot;&gt;
 
 „Können Sie beschreiben, was Sie gerade wahrnehmen?&quot;
@@ -205,19 +213,19 @@ Du hast alle Bereiche exploriert.
 * [[Kommentierende akustische Halluzinationen + Ich-Störung|Sym-Correct]]
 * [[Vor allem formale Denkstörung|Sym-Wrong]]
 
----</tw-passagedata><tw-passagedata pid="9" name="Sym-Correct" tags="" position="1100,100" size="100,100">&lt;div class=&quot;infobox&quot;&gt;
+---</tw-passagedata><tw-passagedata pid="10" name="Sym-Correct" tags="" position="1225,100" size="100,100">&lt;div class=&quot;infobox&quot;&gt;
 &lt;b&gt;Richtig.&lt;/b&gt; Jonas beschreibt (1) kommentierende akustische Halluzinationen und (2) Fremdsteuerungserleben – eine Ich-Störung. Beides sind Gruppe-A-Kriterien nach ICD-11 für Schizophrenie.
 &lt;/div&gt;
 
 [[Zurück zur Befragung|Assessment-Hub]]
 
----</tw-passagedata><tw-passagedata pid="10" name="Sym-Wrong" tags="" position="1225,100" size="100,100">&lt;div class=&quot;infobox&quot;&gt;
+---</tw-passagedata><tw-passagedata pid="11" name="Sym-Wrong" tags="" position="100,225" size="100,100">&lt;div class=&quot;infobox&quot;&gt;
 &lt;b&gt;Nicht ganz.&lt;/b&gt; Formale Denkstörungen betreffen den Denkablauf (Zerfahrenheit, Entgleisen). Im Vordergrund stehen hier die kommentierenden Stimmen (Halluzination) und das Steuerungserleben (Ich-Störung) – beides Gruppe-A-Kriterien.
 &lt;/div&gt;
 
 [[Zurück zur Befragung|Assessment-Hub]]
 
----</tw-passagedata><tw-passagedata pid="11" name="Assessment-Substances" tags="" position="100,225" size="100,100">&lt;&lt;set $doneSubstances = true&gt;&gt;
+---</tw-passagedata><tw-passagedata pid="12" name="Assessment-Substances" tags="" position="225,225" size="100,100">&lt;&lt;set $doneSubstances = true&gt;&gt;
 &lt;img src=&quot;imgs/img_jonas_substances.png&quot; class=&quot;sceneimg&quot;&gt;
 
 „Haben Sie in letzter Zeit Drogen oder Alkohol konsumiert?&quot;
@@ -229,19 +237,19 @@ Du hast alle Bereiche exploriert.
 * [[Cannabis ist Auslöser bei vorhandener Vulnerabilität – Vulnerabilitäts-Stress-Modell|Sub-VulnStress]]
 * [[Cannabis ist die direkte, vollständige Ursache|Sub-Cause]]
 
----</tw-passagedata><tw-passagedata pid="12" name="Sub-VulnStress" tags="" position="225,225" size="100,100">&lt;div class=&quot;infobox&quot;&gt;
+---</tw-passagedata><tw-passagedata pid="13" name="Sub-VulnStress" tags="" position="350,225" size="100,100">&lt;div class=&quot;infobox&quot;&gt;
 &lt;b&gt;Richtig.&lt;/b&gt; Das Vulnerabilitäts-Stress-Modell: Cannabis wirkt als Stressor und überschreitet bei biologisch vulnerablen Personen die Psychoseschwelle. Die Qualität der Symptome (kommentierende Stimmen, Ich-Störung) spricht gegen Cannabis als alleinige Ursache.
 &lt;/div&gt;
 
 [[Zurück zur Befragung|Assessment-Hub]]
 
----</tw-passagedata><tw-passagedata pid="13" name="Sub-Cause" tags="" position="350,225" size="100,100">&lt;div class=&quot;infobox&quot;&gt;
+---</tw-passagedata><tw-passagedata pid="14" name="Sub-Cause" tags="" position="475,225" size="100,100">&lt;div class=&quot;infobox&quot;&gt;
 &lt;b&gt;Zu vereinfacht.&lt;/b&gt; Cannabis kann Psychosen triggern, aber Symptome dieser Qualität (kommentierende Stimmen, Ich-Störung) und der schleichende Verlauf über Wochen sprechen für eine zugrundeliegende Vulnerabilität. Cannabis ist Stressor, nicht alleinige Ursache.
 &lt;/div&gt;
 
 [[Zurück zur Befragung|Assessment-Hub]]
 
----</tw-passagedata><tw-passagedata pid="14" name="Assessment-Risk" tags="" position="475,225" size="100,100">&lt;&lt;set $doneRisk = true&gt;&gt;
+---</tw-passagedata><tw-passagedata pid="15" name="Assessment-Risk" tags="" position="600,225" size="100,100">&lt;&lt;set $doneRisk = true&gt;&gt;
 &lt;img src=&quot;imgs/img_jonas_risk_assessment.png&quot; class=&quot;sceneimg&quot;&gt;
 
 „Haben Sie daran gedacht, sich selbst etwas anzutun?&quot;
@@ -252,7 +260,7 @@ Befund: Kein akuter Suizidwunsch, aber starkes Bedrohungserleben als indirekter 
 
 [[Zurück zur Befragung|Assessment-Hub]]
 
----</tw-passagedata><tw-passagedata pid="15" name="DiffDx" tags="" position="600,225" size="100,100">&lt;img src=&quot;imgs/img_jonas_summary.png&quot; class=&quot;sceneimg&quot;&gt;
+---</tw-passagedata><tw-passagedata pid="16" name="DiffDx" tags="" position="725,225" size="100,100">&lt;img src=&quot;imgs/img_jonas_summary.png&quot; class=&quot;sceneimg&quot;&gt;
 
 &lt;h3&gt;Differentialdiagnose&lt;/h3&gt;
 
@@ -264,7 +272,7 @@ Welchen Schritt machst du zuerst?
 
 * [[① Substanz prüfen|DX-Step1]]
 
----</tw-passagedata><tw-passagedata pid="16" name="DX-Step1" tags="" position="725,225" size="100,100">&lt;b&gt;① Substanzinduziert?&lt;/b&gt;
+---</tw-passagedata><tw-passagedata pid="17" name="DX-Step1" tags="" position="850,225" size="100,100">&lt;b&gt;① Substanzinduziert?&lt;/b&gt;
 
 Cannabis vorhanden – aber: Symptomqualität und Verlauf sprechen gegen Cannabis als alleinige Ursache.
 
@@ -272,7 +280,7 @@ Cannabis vorhanden – aber: Symptomqualität und Verlauf sprechen gegen Cannabi
 
 * [[② Organische Ursache prüfen|DX-Step2]]
 
----</tw-passagedata><tw-passagedata pid="17" name="DX-Step2" tags="" position="850,225" size="100,100">&lt;b&gt;② Organisch?&lt;/b&gt;
+---</tw-passagedata><tw-passagedata pid="18" name="DX-Step2" tags="" position="975,225" size="100,100">&lt;b&gt;② Organisch?&lt;/b&gt;
 
 Körperlich untersucht: kein Fieber, kein Meningismus, orientiert, keine Herdsymptome.
 
@@ -284,7 +292,7 @@ Akut kein Hinweis auf organische Ursache – Abklärung aber ausstehend.
 
 * [[③ Affektive Störung prüfen|DX-Step3]]
 
----</tw-passagedata><tw-passagedata pid="18" name="DX-Step3" tags="" position="975,225" size="100,100">&lt;b&gt;③ Affektive Störung mit Psychose?&lt;/b&gt;
+---</tw-passagedata><tw-passagedata pid="19" name="DX-Step3" tags="" position="1100,225" size="100,100">&lt;b&gt;③ Affektive Störung mit Psychose?&lt;/b&gt;
 
 Keine Euphorie, keine Grandiosität, kein Rededrang. Der Rückzug und die Anhedonie passen eher zu Negativsymptomen als zur Stimmungsachse.
 
@@ -294,7 +302,7 @@ Keine Euphorie, keine Grandiosität, kein Rededrang. Der Rückzug und die Anhedo
 
 * [[Erste psychotische Episode (schizophreniform)|DX-Final]]
 
----</tw-passagedata><tw-passagedata pid="19" name="DX-Final" tags="" position="1100,225" size="100,100">&lt;div class=&quot;infobox&quot;&gt;
+---</tw-passagedata><tw-passagedata pid="20" name="DX-Final" tags="" position="1225,225" size="100,100">&lt;div class=&quot;infobox&quot;&gt;
 &lt;b&gt;Erste psychotische Episode – schizophreniform.&lt;/b&gt;
 
 ICD-11 Schizophrenie erfordert: mind. 1 Gruppe-A-Symptom (Wahn, Halluzination, Ich-Störung, formale Denkstörung) + Zeitkriterium 1 Monat + Ausschluss Substanz/organisch/affektiv.
@@ -304,7 +312,7 @@ Jonas erfüllt heute die Symptomkriterien. Endgültige Diagnose folgt im Verlauf
 
 [[Weiter – Jonas eskaliert|Escalation]]
 
----</tw-passagedata><tw-passagedata pid="20" name="Escalation" tags="" position="1225,225" size="100,100">&lt;img src=&quot;imgs/img_jonas_points_sensor.png&quot; class=&quot;sceneimg&quot;&gt;
+---</tw-passagedata><tw-passagedata pid="21" name="Escalation" tags="" position="100,350" size="100,100">&lt;img src=&quot;imgs/img_jonas_points_sensor.png&quot; class=&quot;sceneimg&quot;&gt;
 
 Die Neonröhre flackert kurz. Jonas springt auf:
 
@@ -314,15 +322,15 @@ Die Neonröhre flackert kurz. Jonas springt auf:
 
 [[Zur Deeskalation|Deesc-Start]]
 
----</tw-passagedata><tw-passagedata pid="21" name="Deesc-Start" tags="" position="100,350" size="100,100">&lt;img src=&quot;imgs/img_deescalation_stance.png&quot; class=&quot;sceneimg&quot;&gt;
+---</tw-passagedata><tw-passagedata pid="22" name="Deesc-Start" tags="" position="225,350" size="100,100">&lt;img src=&quot;imgs/img_deescalation_stance.png&quot; class=&quot;sceneimg&quot;&gt;
 
 &lt;b&gt;Wie gehst du vor?&lt;/b&gt;
 
 * [[Affektvalidierung versuchen|Deesc-Good]]
 * [[Lorazepam anbieten (akute Sedierung)|Deesc-Meds]]
-* [[Fordernd eingreifen – falsche Option|Deesc-Wrong]]
+* [[Fordernd eingreifen|Deesc-Wrong]]
 
----</tw-passagedata><tw-passagedata pid="22" name="Deesc-Good" tags="" position="225,350" size="100,100">&lt;&lt;set $trust += 1&gt;&gt;
+---</tw-passagedata><tw-passagedata pid="23" name="Deesc-Good" tags="" position="350,350" size="100,100">&lt;&lt;set $trust += 1&gt;&gt;
 &lt;&lt;set $agitation -= 1&gt;&gt;
 „Das wirkt gerade extrem belastend. Ich sehe, wie sehr Sie kämpfen. Wir schaffen das gemeinsam – Schritt für Schritt.&quot;
 
@@ -334,7 +342,7 @@ Jonas senkt die Schultern. Die Atmosphäre wird ruhiger.
 
 [[Jonas beruhigt sich|Post-Deesc]]
 
----</tw-passagedata><tw-passagedata pid="23" name="Deesc-Meds" tags="" position="350,350" size="100,100">&lt;&lt;set $agitation -= 2&gt;&gt;
+---</tw-passagedata><tw-passagedata pid="24" name="Deesc-Meds" tags="" position="475,350" size="100,100">&lt;&lt;set $agitation -= 2&gt;&gt;
 „Herr R., es gibt ein Beruhigungsmittel – Lorazepam – das kurzfristig helfen kann. Freiwillig, Sie entscheiden.&quot;
 
 &lt;img src=&quot;imgs/img_medication_oral.png&quot; class=&quot;sceneimg&quot;&gt;
@@ -347,7 +355,7 @@ Jonas nimmt die Tablette.
 
 [[Jonas beruhigt sich|Post-Deesc]]
 
----</tw-passagedata><tw-passagedata pid="24" name="Deesc-Wrong" tags="" position="475,350" size="100,100">&lt;&lt;set $trust -= 2&gt;&gt;
+---</tw-passagedata><tw-passagedata pid="25" name="Deesc-Wrong" tags="" position="600,350" size="100,100">&lt;&lt;set $trust -= 2&gt;&gt;
 &lt;&lt;set $agitation += 2&gt;&gt;
 Jonas springt auf: „Sie hören mir nicht zu! Ich muss hier raus!&quot;
 
@@ -355,7 +363,7 @@ Jonas springt auf: „Sie hören mir nicht zu! Ich muss hier raus!&quot;
 
 [[Trotzdem weiter|Post-Deesc]]
 
----</tw-passagedata><tw-passagedata pid="25" name="Post-Deesc" tags="" position="600,350" size="100,100">&lt;img src=&quot;imgs/img_jonas_calm_down.png&quot; class=&quot;sceneimg&quot;&gt;
+---</tw-passagedata><tw-passagedata pid="26" name="Post-Deesc" tags="" position="725,350" size="100,100">&lt;img src=&quot;imgs/img_jonas_calm_down.png&quot; class=&quot;sceneimg&quot;&gt;
 
 Jonas ist wieder ansprechbar, die unmittelbare Eskalation ist abgeklungen.
 
@@ -363,7 +371,7 @@ Jonas ist wieder ansprechbar, die unmittelbare Eskalation ist abgeklungen.
 
 [[Weiter zur Behandlung|Treatment]]
 
----</tw-passagedata><tw-passagedata pid="26" name="Treatment" tags="" position="725,350" size="100,100">&lt;img src=&quot;imgs/img_psychoeducation_scene.png&quot; class=&quot;sceneimg&quot;&gt;
+---</tw-passagedata><tw-passagedata pid="27" name="Treatment" tags="" position="850,350" size="100,100">&lt;img src=&quot;imgs/img_psychoeducation_scene.png&quot; class=&quot;sceneimg&quot;&gt;
 
 &lt;h3&gt;Psychoedukation &amp; Behandlungsplanung&lt;/h3&gt;
 
@@ -378,7 +386,7 @@ Jetzt möchtest du die Negativsymptome einordnen, die Tom beschrieben hat.
 * [[Negativsymptome (Anhedonie, Apathie, Asociality, Affektverflachung)|Neg-Correct]]
 * [[Positivsymptome|Neg-Wrong]]
 
----</tw-passagedata><tw-passagedata pid="27" name="Neg-Correct" tags="" position="850,350" size="100,100">&lt;div class=&quot;infobox&quot;&gt;
+---</tw-passagedata><tw-passagedata pid="28" name="Neg-Correct" tags="" position="975,350" size="100,100">&lt;div class=&quot;infobox&quot;&gt;
 &lt;b&gt;Richtig – Negativsymptome (die 5 A&#39;s):&lt;/b&gt;
 Anhedonie · Apathie · Asociality · Affektverflachung · Alogie.
 
@@ -387,13 +395,13 @@ Diese entstehen oft schon in der Prodromalphase, Wochen vor der ersten floriden 
 
 [[Weiter zur Medikamentenwahl|Med-Choice]]
 
----</tw-passagedata><tw-passagedata pid="28" name="Neg-Wrong" tags="" position="975,350" size="100,100">&lt;div class=&quot;infobox&quot;&gt;
+---</tw-passagedata><tw-passagedata pid="29" name="Neg-Wrong" tags="" position="1100,350" size="100,100">&lt;div class=&quot;infobox&quot;&gt;
 &lt;b&gt;Nicht korrekt.&lt;/b&gt; Positivsymptome sind das, was hinzukommt (Stimmen, Wahn). Was Tom beschreibt ist ein Verlust – das sind Negativsymptome: Anhedonie, Apathie, sozialer Rückzug.
 &lt;/div&gt;
 
 [[Weiter zur Medikamentenwahl|Med-Choice]]
 
----</tw-passagedata><tw-passagedata pid="29" name="Med-Choice" tags="" position="1100,350" size="100,100">&lt;img src=&quot;imgs/img_medication_oral.png&quot; class=&quot;sceneimg&quot;&gt;
+---</tw-passagedata><tw-passagedata pid="30" name="Med-Choice" tags="" position="1225,350" size="100,100">&lt;img src=&quot;imgs/img_medication_oral.png&quot; class=&quot;sceneimg&quot;&gt;
 
 „Herr R., für die Weiterbehandlung gibt es Medikamente, die direkt auf die Stimmen und das Bedrohungserleben wirken – Antipsychotika.&quot;
 
@@ -402,7 +410,7 @@ Diese entstehen oft schon in der Prodromalphase, Wochen vor der ersten floriden 
 * [[Risperidon – D2-Blockade erklären|Med-Risperidon]]
 * [[Aripiprazol – partieller D2-Agonismus erklären|Med-Aripiprazol]]
 
----</tw-passagedata><tw-passagedata pid="30" name="Med-Risperidon" tags="" position="1225,350" size="100,100">„Risperidon blockiert Dopamin-D2-Rezeptoren im mesolimbischen System. Bei Psychosen ist die Dopaminaktivität dort erhöht – das erzeugt die Stimmen und das Bedrohungserleben. Risperidon dreht diesen Regler herunter.&quot;
+---</tw-passagedata><tw-passagedata pid="31" name="Med-Risperidon" tags="" position="100,475" size="100,100">„Risperidon blockiert Dopamin-D2-Rezeptoren im mesolimbischen System. Bei Psychosen ist die Dopaminaktivität dort erhöht – das erzeugt die Stimmen und das Bedrohungserleben. Risperidon dreht diesen Regler herunter.&quot;
 
 &lt;i&gt;Jonas:&lt;/i&gt; „Wenn das die Stimmen leiser macht…&quot;
 
@@ -412,7 +420,7 @@ Diese entstehen oft schon in der Prodromalphase, Wochen vor der ersten floriden 
 
 [[Weiter zur Aufnahme|Admission]]
 
----</tw-passagedata><tw-passagedata pid="31" name="Med-Aripiprazol" tags="" position="100,475" size="100,100">„Aripiprazol ist ein partieller D2-Agonist – es moduliert die Dopaminaktivität, ohne sie vollständig zu blockieren. Bei pathologisch erhöhter Aktivität wirkt es dämpfend, ohne die normale Funktion zu unterdrücken.&quot;
+---</tw-passagedata><tw-passagedata pid="32" name="Med-Aripiprazol" tags="" position="225,475" size="100,100">„Aripiprazol ist ein partieller D2-Agonist – es moduliert die Dopaminaktivität, ohne sie vollständig zu blockieren. Bei pathologisch erhöhter Aktivität wirkt es dämpfend, ohne die normale Funktion zu unterdrücken.&quot;
 
 &lt;div class=&quot;infobox&quot;&gt;
 &lt;b&gt;Dopaminhypothese:&lt;/b&gt; Erhöhte D2-Aktivität im mesolimbischen System → Positivsymptome. Aripiprazol als partieller Agonist: weniger Prolaktinerhöhung und extrapyramidale Nebenwirkungen als klassische Antipsychotika.
@@ -420,7 +428,7 @@ Diese entstehen oft schon in der Prodromalphase, Wochen vor der ersten floriden 
 
 [[Weiter zur Aufnahme|Admission]]
 
----</tw-passagedata><tw-passagedata pid="32" name="Admission" tags="" position="225,475" size="100,100">&lt;img src=&quot;imgs/img_admission_walk.png&quot; class=&quot;sceneimg&quot;&gt;
+---</tw-passagedata><tw-passagedata pid="33" name="Admission" tags="" position="350,475" size="100,100">&lt;img src=&quot;imgs/img_admission_walk.png&quot; class=&quot;sceneimg&quot;&gt;
 
 „Herr R., meine Empfehlung wäre, für die nächsten Tage hier zu bleiben – freiwillig. Wir können Sie schützen, die Untersuchungen abschließen und die Behandlung beginnen.&quot;
 
@@ -430,7 +438,7 @@ Diese entstehen oft schon in der Prodromalphase, Wochen vor der ersten floriden 
 
 [[Zur Übergabe und Abschluss|Handover]]
 
----</tw-passagedata><tw-passagedata pid="33" name="Handover" tags="" position="350,475" size="100,100">&lt;img src=&quot;imgs/img_handover_scene.png&quot; class=&quot;sceneimg&quot;&gt;
+---</tw-passagedata><tw-passagedata pid="34" name="Handover" tags="" position="475,475" size="100,100">&lt;img src=&quot;imgs/img_handover_scene.png&quot; class=&quot;sceneimg&quot;&gt;
 
 &lt;h3&gt;Übergabe &amp; Abschluss&lt;/h3&gt;
 
@@ -451,7 +459,7 @@ Jonas wird auf die Station gebracht. Er wirkt erschöpft, aber ruhiger.
 
 [[Zum Feedback|Feedback]]
 
----</tw-passagedata><tw-passagedata pid="34" name="Feedback" tags="" position="475,475" size="100,100">&lt;h2&gt;Feedback&lt;/h2&gt;
+---</tw-passagedata><tw-passagedata pid="35" name="Feedback" tags="" position="600,475" size="100,100">&lt;h2&gt;Feedback&lt;/h2&gt;
 &lt;p&gt;Bitte fülle das folgende Formular aus:&lt;/p&gt;
 
 &lt;iframe
@@ -464,11 +472,11 @@ Jonas wird auf die Station gebracht. Er wirkt erschöpft, aber ruhiger.
 Wird geladen…
 &lt;/iframe&gt;
 
----</tw-passagedata><tw-passagedata pid="35" name="Glossary-Hallucination" tags="" position="600,475" size="100,100">&lt;h3&gt;Halluzination&lt;/h3&gt;
+---</tw-passagedata><tw-passagedata pid="36" name="Glossary-Hallucination" tags="" position="725,475" size="100,100">&lt;h3&gt;Halluzination&lt;/h3&gt;
 Wahrnehmung ohne äußeren Stimulus. Bei akustischen Halluzinationen werden Stimmen gehört, die kommentieren, befehlen oder dialogisch sprechen.
 &lt;&lt;link &quot;Zurück&quot;&gt;&gt;&lt;&lt;back&gt;&gt;&lt;&lt;/link&gt;&gt;
 
----</tw-passagedata><tw-passagedata pid="36" name="Glossary-SelfDisturbance" tags="" position="725,475" size="100,100">&lt;h3&gt;Ich-Störung&lt;/h3&gt;
+---</tw-passagedata><tw-passagedata pid="37" name="Glossary-SelfDisturbance" tags="" position="850,475" size="100,100">&lt;h3&gt;Ich-Störung&lt;/h3&gt;
 Veränderung des Erlebens der eigenen Person:
 &lt;ul&gt;
   &lt;li&gt;Gedankeneingebung – Gedanken werden von außen eingegeben&lt;/li&gt;
@@ -477,7 +485,7 @@ Veränderung des Erlebens der eigenen Person:
 &lt;/ul&gt;
 &lt;&lt;link &quot;Zurück&quot;&gt;&gt;&lt;&lt;back&gt;&gt;&lt;&lt;/link&gt;&gt;
 
----</tw-passagedata><tw-passagedata pid="37" name="Glossary-Negative" tags="" position="850,475" size="100,100">&lt;h3&gt;Negativsymptome – die 5 A&#39;s&lt;/h3&gt;
+---</tw-passagedata><tw-passagedata pid="38" name="Glossary-Negative" tags="" position="975,475" size="100,100">&lt;h3&gt;Negativsymptome – die 5 A&#39;s&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;b&gt;Affektverflachung&lt;/b&gt; – wenig Mimik, monotone Stimme&lt;/li&gt;
   &lt;li&gt;&lt;b&gt;Alogie&lt;/b&gt; – Sprachverarmung&lt;/li&gt;
@@ -487,11 +495,11 @@ Veränderung des Erlebens der eigenen Person:
 &lt;/ul&gt;
 &lt;&lt;link &quot;Zurück&quot;&gt;&gt;&lt;&lt;back&gt;&gt;&lt;&lt;/link&gt;&gt;
 
----</tw-passagedata><tw-passagedata pid="38" name="Glossary-VulnStress" tags="" position="975,475" size="100,100">&lt;h3&gt;Vulnerabilitäts-Stress-Modell&lt;/h3&gt;
+---</tw-passagedata><tw-passagedata pid="39" name="Glossary-VulnStress" tags="" position="1100,475" size="100,100">&lt;h3&gt;Vulnerabilitäts-Stress-Modell&lt;/h3&gt;
 Psychotische Erkrankungen entstehen durch Zusammenspiel von biologischer Vulnerabilität und Umweltstressoren (Cannabis, Life events, Schlafentzug). Je höher die Vulnerabilität, desto niedrigere Schwelle.
 &lt;&lt;link &quot;Zurück&quot;&gt;&gt;&lt;&lt;back&gt;&gt;&lt;&lt;/link&gt;&gt;
 
----</tw-passagedata><tw-passagedata pid="39" name="Glossary-Dopamine" tags="" position="1100,475" size="100,100">&lt;h3&gt;Dopaminhypothese&lt;/h3&gt;
+---</tw-passagedata><tw-passagedata pid="40" name="Glossary-Dopamine" tags="" position="1225,475" size="100,100">&lt;h3&gt;Dopaminhypothese&lt;/h3&gt;
 Erhöhte D2-Aktivität im mesolimbischen System → Positivsymptome. Alle Antipsychotika wirken über D2-Blockade oder -Modulation.
 &lt;&lt;link &quot;Zurück&quot;&gt;&gt;&lt;&lt;back&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata></tw-storydata>
 	<script id="script-sugarcube" type="text/javascript">
